@@ -1,11 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,900;1,500;1,900&display=swap');
+
+
 html{
-  font-family:  'Exo 2', sans-serif;
+  font-family: 'Montserrat', 'Exo 2', sans-serif;
   font-size: 10px;
 }
 
 body {
   background: black;
 }
+  
+  .no-scroll
+  { overflow: hiden;}
+  
+  [class~="no-scroll"] {
+   overflow: hiden;
+  }
+
 
 *{
   margin:0;
@@ -13,12 +24,34 @@ body {
   box-sizing: border-box;
 }
 
+/* container aligns */
+
 .container{
   padding-left: 1.5rem;
   padding-right: 1.5rem;
   max-width: 1200px;
   height: 100%;
 }
+
+/* Main section */
+.main{
+/* display: grid;
+ grid-template-areas: 
+ "intro skills about_me price"
+ "portfolio feedback form-site seo";
+ grid-template-rows: 5fr 5fr;
+ grid-template-columns: 5fr 5fr;*/
+ background: black;
+}
+
+
+/* FedBack content */
+
+.feedback-section{
+ height: 100%;
+ grid-area: feedback;
+}
+
 .feedback-content a{
  text-decoration: none;
  margin-bottom: 10px;
@@ -40,6 +73,13 @@ body {
  font-size: 40px;
  color: black;
  
+}
+
+/* section Price "how i work" */
+
+.price-section {
+ font-weight: 500;
+ grid-area: price;
 }
 
 .price-box{
@@ -67,31 +107,31 @@ body {
   
  }
 
-.price h3 {
+.price-section h3 {
  padding: 10px;
  font-weight:900;
  color:#FFF;
- font-size:30px;
+ font-size: 40px;
 }
 
-.price p {
- margin: 20px;
- font-weight:700;
+.price-section p {
+ margin: 25px;
+ font-weight:900;
  color: #591E59 ;
  font-size: 25px;
 }
-.price li {
+.price-section li {
  margin-left:5px;
  color: black;
- text-transform: uppercase;
  letter-spacing: 0.1px;
- font-size: 17px;
- line-height: 2;
+ font-size: 20px;
+ line-height: 30px;
 }
 
+/* main Intro content */
 
 .intro {
- height: 360px;
+ height: 380px;
  width: 100%;
  display: grid;
  grid-template-areas: 
@@ -102,7 +142,7 @@ body {
 }
 
 .intro{
- 
+ height: 410px;
   border-bottom: 2px solid var(--main-color);
  
 }
@@ -110,7 +150,7 @@ body {
   position: absolute;
   z-index: 2;
   grid-area: text;
-  margin-top: 180px;
+  margin-top: 230px;
 }
 .intro__photo{
  position: relative;
@@ -140,39 +180,34 @@ body {
     }
   }
   
-  .main-section{
-    background: black;
-  }
   .adaptive{
     width: 100%;
     margin-top: 30px;
   }
   
-  
   .text-intro_hi, .text-intro_red, .text-intro_design {
-    
-    letter-spacing: 0;
-    font-family: 'Exo 2', sans-serif;
-    color: white;
-    font-size: 3rem;
+    line-height: 41px;
+    letter-spacing: 0px;
+    color: #FFFFFF;
+    font-size: 35px;
     font-weight: 900;
     padding-bottom: 5px;
+    white-space: nowrap;
   }
   .text-intro_red{
-   width: 14ch;
-    font-size: 4rem;
-    letter-spacing: 0.1rem;
+    width: 14ch;
+    font-size: 40px;
     color: black;
     background-color: var(--main-color);
     white-space: nowrap;
     overflow: hidden;
     border-right: 4px solid orange;
-    animation: flashing 0.75s step-end infinite, text-print 5s steps(13) ;
+    animation: flashing 0.75s step-end infinite, text-print 5s steps(14); /*animation: flashing 0.75s step-end infinite, text-unprint 4s steps(14);*/
   }
   
   @keyframes flashing {
    0% {
-   border-color: orange;
+   border-color: orange ;
    }
    50% {
     border-color: transparent ;
@@ -181,14 +216,15 @@ body {
     border-color: orange;
    }
   }
+  @keyframes text-unprint{
+   from {width: 14ch;}
+   to   {width: 0ch;}
+   
+  }
   
   @keyframes text-print{
-   from {
-    width: 0ch;
-   }
-   to {
-    width: 14ch;
-   }
+   from { width: 0ch; }
+   to  {  width: 14ch; }
   }
   
   .text-intro_gray{
@@ -198,6 +234,7 @@ body {
     padding-bottom: 5px; 
   }
   
+/* icon header */
 
   .icon-main a:hover {
     transform: translateY(-5px);
@@ -208,26 +245,24 @@ body {
   text-decoration: none;
   color: white;
   letter-spacing: 3rem;
-  font-size: 20px;
-  
+  font-size: 22px;
   }
   .icon-main{
     text-align: right;
     margin-right: 70px;
     margin-top: 18px;
   }
-  
-  
-    
+ 
     .text-dev {
       padding-top: 15px;
       padding-left: 0px;
       font-size: 3rem;
       text-align: center;
       color: lightgray;
+      
     }
     
-   .text-portfolio{
+   .text-{
      margin-top: 20px;
      margin-bottom: 50px;
      letter-spacing: 0.5rem;
@@ -258,7 +293,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: var(--ground-color);
+  background: linear-gradient( to bottom, var(--ground-color), #085E88);
   transition: 0.5s;
   transform: translateX(100%);
 }
@@ -277,7 +312,6 @@ body {
   text-decoration: none;
   text-transform: uppercase;
   font-size: 25px;
-  color:#829193;
   font-weight: 900;
 }
 .menu-btn {
@@ -339,7 +373,6 @@ body {
 }
 
 
-
  :root{
   
    --main-color: #088f95;
@@ -347,16 +380,26 @@ body {
    --footer-color: #03323B;
    --ground-color: #03434C;
    --text-color: #96C2CA;
+   --decor-color: #088f95;
  }
  
- .skills {
-  margin-top:0px;
+ /* section Skills */
+  
+ .skills-section {
+  margin-top:-30px;
+ }
+ 
+ .skill-box {
+  background: black;
+  width: 100%;
+  height: 400px;
+  margin-top: 30px;
  }
  
  .my-skills{
    width: 300px;
    margin: 0 auto;
-   margin-top: 30px;
+   margin-top: 10px;
    margin-bottom: 100px;
  }
  
@@ -504,7 +547,30 @@ body {
        width: 240px;
      }
    }
-   
+  /* case section */
+  .case-section{
+   height: 100%;
+  }
+  .case-content {
+   background-color: #0BAB6870;
+  }
+  .case-text{
+   background: green;
+   text-align: center;
+   font-size: 40px;
+   font-weight: 700;
+   padding: 10px;
+  }
+  
+  .fotorama {
+   padding: 20px;
+   display: flex;
+   justify-content: center;
+  }
+  
+  
+  /* footer */
+  
    .footer-icon {
     margin-top: 10px;
     grid-area: icon;
@@ -525,16 +591,13 @@ body {
     margin-left: 10px;
     margin-top: 10px;
     line-height: 15px;
-    font-size:15px;
+    font-size: 15px;
     color: #0783B7;
     text-decoration: none;
-    font-weight: 200;
+    font-weight: 500;
    }
    
-  .case-background {
-   background-color: #0BAB6870;
-  }
-   
+
    footer {
     margin-top: 30px;
    }
@@ -553,23 +616,24 @@ body {
    }
  .text-footer{
    grid-area: text;
-   color: black;
+   color: #FFFFFF;
    font-size: 10px;
    letter-spacing: 2px;
    text-shadow: 5px;
  }
  
+ /* buttons want bay */
+ 
  .btn-bay{
    margin-left: -10px;
-   margin-top: 50px;
+   margin-top: 30px;
    width: 100%;
    display: flex;
    justify-content: center;
  }
  .btn-bay a {
-  padding-top: 5px;
+  padding-top: 7px;
   font-weight: 900;
-  font-family: roboto;
   letter-spacing: 2px;
   text-decoration: none;
   text-align: center;
@@ -579,16 +643,17 @@ body {
   font-size: 25px;
   font-weight: 900;
   width: 280px;
-  height: 45px;
+  height: 47px;
   border: none;
-  border: 2px solid  var(--main-color) ;
+  border: 1px solid  var(--decor-color);
   outline: none;
-  color:  var(--main-color) ;
+  color:  var(--decor-color) ;
   background: transparent;
   cursor: pointer;
   position: relative;
   z-index: 0;
   border-radius: 7px;
+  box-shadow: 0px 0px 12px #0BE4FF;
 }
   
   .btn-neon:before {
@@ -607,7 +672,7 @@ body {
 }
 
 .btn-neon:active {
-  color: var(--main-color);
+  color: #F1FF07B8;
 }
 
 .style {
@@ -638,52 +703,26 @@ body {
   border-radius: 10px;
 }
 
-@keyframes glowing {
-  0% { background-position: 0 0; }
-  50% { background-position: 400% 0; }
-  100% { background-position: 0 0; }
-}
-
-
+/* Form modal */
    
-   .form-text{
-     text-align: left; 
-     color: whitesmoke;
-     font-size: 3rem;
-     padding-left:20px;
-   }
-
-.form-site {
+.form-site-section {
  padding-top: 15px;
  background-color: #4e36c8;
  padding-bottom: 20px;
 
  
 }
-        
-        .form-textarea {
-                 height: 150px;
-                 width: 200px;
-                 margin-left: 30px;
-                 margin-right: auto;
-                 margin-bottom: 20px;
-                 margin-top: 30px;
-                 padding: 1rem;
-                 color: white;
-                 display: block;
-                 font-size: 2rem;
-                 background: black;
-                 border: none;
-                 border-bottom: 2px;
-        }
+  .form-text{
+     text-align: left; 
+     color: whitesmoke;
+     font-size: 3rem;
+     padding-left:20px;
+   }
+
         .popup-text{
           color: red;
         }
-        .fotorama{
-          display: flex;
-          justify-content: center;
-          
-        }
+
         .flag {
     padding:0;
     list-style: none;
@@ -718,6 +757,9 @@ body {
           font-family: Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
           font-size: 1rem;
         }
+  
+     /* button want price */
+        
         .btn-sells {
           display: flex;
           justify-content: left;
@@ -725,69 +767,125 @@ body {
         }
         .btn-sell {
           margin-left: 30px;
-          width: 200px;
+          width: 250px;
           padding: 15px;
           padding-left: 20px;
-          font-size: 1rem;
+          font-size: 15px;
           color: white;
-          
           border-radius: 5px;
           background: #A60844;
         }
         .btn-sells a {
          text-decoration: none;
          letter-spacing: 2px;
-         font-size: 10px;
+         font-size: 15px;
          
         }
         
+       /* Modal window */
+       
+        .modal-close {
+        display: flex;
+        justify-content: right;
+        position: absolute;
+        z-index: 2000;
+        right:0;
+        margin-right: 30px;
+        margin-top: -10px;
+        }
+        .modal-close-img{
+         width:25px;
+         border-radius:50px;
+        }
+        .modal-s {
+            display: none;
+            width: 100%;
+            height: 100%;
+            background-color: #000000BD;
+            position: fixed;
+            top:0;
+            left:0;
+            z-index: 1000;
+            padding: 20px 20px;
+        }
+        .show {
+         display: flex;
+        }
+        
+        .modal-dialog{
+         width: 400px;
+         height: 600px;
+         max-width: 1600px;
+         margin: auto;
+         padding: 20px 20px;
+         background-color: #4e36c8 ;
+        }
+        
+        .modal{
+         display: flex;
+         position: fixed;
+         z-index: 9999;
+        }
         .form-block{
           display: inline-block;
          
         }
           .form-input{
             width: 300px;
-            margin-left: 30px;
+            margin-left: 10px;
             margin-right: auto;
-            margin-bottom: 20px;
-            margin-top: 30px;
+            margin-bottom: 10px;
+            margin-top: 10px;
             padding: 1rem;
             color: white;
             display: block;
-            font-size: 1rem;
+            font-size: 15px;
             background: black
           }
                  .form-input-popup{
-                 width: 200px;
-                 margin-left: 30px;
+                 width: 300px;
+                 margin-left: 10px;
                  margin-right: auto;
-                 margin-bottom: 20px;
-                 margin-top: 30px;
+                 margin-bottom: 10px;
+                 margin-top: 10px;
                  padding: 1rem;
                  color: white;
                  display: block;
-                 font-size: 1rem;
+                 font-size: 15px;
                  background: black;
                  border: none;
                  border-bottom: 2px;
                  }
-  
-  .skill-box{ 
-   background-color:transparent;
-   border: 1pxsolid orange; 
-   width: 100%;
-   border-radius: 5px; 
-   height: 50rem;
+    
+    .form-textarea {
+     height: 100px;
+     width: 300px;
+     margin-left: 10px;
+     margin-right: auto;
+     margin-bottom: 20px;
+     margin-bottom: 10px;
+     padding: 10px;
+     color: white;
+     font-size: 15px;
+     background: black;
+     border: none;
+     border-bottom: 2px;
+    }
+   /* content about me */
    
+   .about-section{
+    height: 100%;
+    
    }
    
    .about_me{
-     padding-top: 15px;
+     padding-top: -30px;
      width: 100%;
      height: auto;
      margin-bottom: 10px;
-     background-color: #171a23;
+     background: linear-gradient(#000112,#011F5C); /*171a23*/
      padding-bottom: 2rem;
+     
    }
 
 .about_me p {
@@ -798,20 +896,26 @@ body {
 }
 
 .about_me h2{
-  margin: 2rem;
-  font-size: 3rem;
-  color: gray;
+  margin: 20px;
+  font-size: 30px;
+  color: white;
 }
 
 .img_about_me{
-  box-shadow: 2px 2px 20px  var(--main-color);
+  box-shadow: 0px 0px 30px #003150;
   margin: 2rem;
   border: 2px;
-  height: 250px;
-  
+  height: 270px;
+  border-radius: 7px;
 }
 
-.img_about_logo {
+.reactlogo {
+ 
+ margin-top: 70px;
  width: 150px;
- margin-bottom: 50px;
+ height: 150px;
+}
+
+.img-content{
+ display: flex;
 }

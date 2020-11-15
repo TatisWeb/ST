@@ -6,15 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <!-- Fonts -->
- <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@900&display=swap" rel="stylesheet">
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;500;700;900&display=swap" rel="stylesheet">
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" >
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" >
+  
   <!--Style CSS -->
   <link rel="stylesheet" href="Stylenewland.css">
-
- <!-- Animate css -->
-    <link rel="stylesheet" href="animate.css">
-    <link rel="stylesheet" href="neon.css">
 
  <!-- JQuery -->
   <script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
@@ -30,14 +29,12 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.js"></script>
     
     <!-- jQuery Modal -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css">
   
-      <title>Разработчик сайтов & дизайна</title>
+      <title>Разработка сайтов - Sergey Tarasenko 2020</title>
 
 </head>
 
-<body id="body">
+<body id="body" class="body">
   
   <header>
                <!-- Хедер-->
@@ -74,7 +71,7 @@
  
             <!--Main content -->
 
-  <main id="main">
+  <main id="main" class="main">
   
   <section class="main-section"> 
   
@@ -88,7 +85,7 @@
    <p  class="text-intro_gray">добро пожаловать!</p>
    <h2 class="text-intro_hi"> Привет,<br>Я Сергей Тарасенко</h2> 
    <h1 class="text-intro_red"> Веб разработчик</h1>
-   <h1 class="text-intro_design"> Создаю сайты & дизайн</h1>
+   <h1 class="text-intro_design"> Создаю сайты </h1>
       
         </div>
   
@@ -104,9 +101,8 @@
   
         <!-- Секция Скиллы -->
      
-     <section id="skills" class="skills">
-      
-     <div class="container"> 
+     <section id="skills" class="skills-section">
+     
      <div class="skill-box">
    
     <h3 class="text-dev">Мои навыки</h3>
@@ -169,54 +165,58 @@
               <span class="bar-text"> Photoshop 90%</span>
              </div>
             </div>
-           </div>
+            </div>
+           
         
            
            <!--Кнопка Неоновая Хочу сайт -->
            
          <div class="btn-bay">
               
-         <a href="#ex1" rel="modal:open"class="btn-neon">Хочу сайт!</a>
+         <a href="#" class="btn-neon">Хочу сайт!</a>
         
          </div>
          
          </div>
          </div>
-         </div>
+         
          </section> 
          
               <!-- Block about me -->
          
-         <section class="about_section">
+         <section class="about-section">
           
            <div class="about_me">
              <div class="container">
-             <img class="img_about_me" src="Facelogo2t.png" alt="aboutMe">
-             <iimg class="img_about_logo" src="i.webp" >
+             <div class="img-content">
+             <img class="img_about_me" src="about-me.jpg" alt="aboutMe">
+             <img class="reactlogo" src="reactlogo.jpg" >
+           </div>
            <h2> Обо мне </h2>
-           <p class="text">Мне 37 лет, я Full Stek Front-End разработчик, люблю програмировать и делать крутые и сложные проекты, постоянно развиваться и прокачивать свои скилы. Владею React.JS/Redux.JS эти библиотеки позволяют создавать лучшие сайты в мире</p>
+           <p class="text">Мне 37 лет, высшее техническое образование, живу в Москве, являюсь - Full Stek, FrontEnd разработчиком! Разрабатываю сайты, приложения, и их дизайн. Очень люблю свою работу, люблю програмировать и делать крутые и сложные проекты. Постоянно развиваюсь изучаю новые технологии. Владею языками HTML,CSS и JavaScript в связке с фреймворком React.JS это позволяет мне создавать лучшие сайты для Вас!</p>
            </div>
            </div>
            </section>
-           
-           <section class="price">
+          
+           <!-- Section how i work -->
+           <section class="price-section">
             
              <div class="price-box">
               <div class="container">
                 
                 <h3>Как я работаю</h3>
                 
-                <p>-ВЫ</p>
+                <p>•ВЫ</p>
            
            <ul class="price-item">
-           <li> Предоставляете пожелания
+           <li>Предоставляете пожелания
               или эскизы сайта или скриншоты в любой удобной для Вас форме</li>
-           <li>Обсуждаем функционал будущего сайта</li>
+           <li>Обсуждаете со мной функционал будущего сайта</li>
            <li>Определяетесь со стилем</li>
            <li>Согласовываете и утверждаете присланный мною дизайн-макет</li>
             <li>Запускаете сайт!</li>
             </ul>
-            <p>-Я</p>
+            <p>•Я</p>
             <ul class="price-item">
              <li>Вникаю в ваш бизнес, обсуждаем все процессы, связанные с онлайн-решением</li>
              <li>Продумываю концепцию будущего сайта</li>
@@ -225,8 +225,9 @@
              <li>Утверждаем дизайн</li>
              <li>Устанавливаю готовый сайт на Ваш аккаунт</li>
              <li>Помогаю подключить платежные, логистические и маркетинговые модули</li>
-             <li>устанавливаю Админ-панель, для управления сайтом</li>
-             <li> помогаю запустить сайт</li>
+             <li>Устанавливаю Админ-панель, для управления сайтом</li>
+             <li>Помогаю запустить сайт</li>
+             <li>Высылаю весь проект и подробные инструкции</li>
             </ul>
               
             </div>
@@ -237,24 +238,24 @@
                
                <!--Секция портфолио слайдер -->
        
-        <section class="portfolio">
+        <section class="case-section">
         
-        <div class="case-background">
+        <div class="case-content">
          
-        <h1 class="text-portfolio">Кейсы</h1>
+        <h1 class="case-text">Кейсы</h1>
         
-        <div class="foto-portfolio" >
         <div class="fotorama" data-allowfullscreen="native" data-height="300" data-width="300">
         <img src="ProjectMC.jpg">
         <img src="Slider3.jpg">
         <img src="Slider4.jpg">
         <img src="Slider9.png">
+       
         </div>  
-        </div>
         </div>
         
         </section>
-         <section class="feedback">
+        
+         <section class="feedback-section">
           
            <div class="feedback-content">
            <div class="container"> 
@@ -265,11 +266,13 @@
           
            </div>
            </div>
+          
           </section>
           
         <!-- Секция заказ форма -->
         
-        <section class="form-site">
+        <section class="form-site-section">
+        
         <div class="container"> 
       
        <div class="form-block">
@@ -290,38 +293,49 @@
                
        <div class="btn-sells">
        <form action="Portfolio.html">
-       <a href="#ex1" rel="modal:open"class="btn-sell">Узнать стоимость</a>
+       <a href="#" class="btn-sell">Узнать стоимость</a>
        </form>
        </div>
-          
-          
-         <!-- модальное окно 1 modal1--> 
          
-       <div id="ex1" class="modal">
-             
-       <div class="form-block-div">
-       <form class="form-block" style="">
-       <p class="form-text"> Оставьте заявку <br>и мы обязательно <br>договоримся</p>
-       <input class="form-input-popup" type="text" placeholder="Имя">
-       <input class="form-input-popup" type="text" placeholder="телефон">
-       <input class="form-input-popup" type="text" placeholder="eMail">
-          
-       <textarea class="form-textarea">Ваш коментарий
-       </textarea>
+    
        </div>
+       
+       </section>
+       
+           <!-- new modal-s window bay -->
+      
+       <div class="modal-s">
+      
+       <div class="modal-dialog">
+       
+       <div class="modal-close">
+        <a href="#" class="modal-btn"><img class="modal-close-img" src="computer-icons-icon-design-download-fail.jpg"></a>
+      </div>
+       <form class="form-block">
+      
+       <p class="form-text"> Оставьте заявку <br>и мы обязательно <br>договоримся</p>
+       
+       <input class="form-input-popup" type="text" placeholder="Имя">
+       
+       <input class="form-input-popup" type="phone" placeholder="телефон/соц.сеть">
+       
+       <input class="form-input-popup" type="email" placeholder="eMail">
+          
+       <textarea class="form-textarea" type="text" placeholder="Ваш коментарий:"></textarea>
+       
                  <!-- Флаг -->
        <ul class="flag-list">
        <li class="flag" style="color:black; font-size: 1.5rem">Я согласен на обработку персональных данных</li>
        </ul>
        <div class="btn-sells">
+       
        <form action="Portfolio.html">
        <button type="submit" class="btn-sell">Узнать стоимость</button>
        </form>
           
        </div>
        </div>
-       
-       </section>
+       </div>
        </main>
     
                 <!--Фуутер-->
