@@ -34,11 +34,11 @@
 
 </head>
 
-<audio autoplay="autoplay">
+<!--<audio autoplay="autoplay">
  <source src="audio/Foushe - Deep End (Andrey Vertuga Remix) (Radio Edit) - Music passion_(Audio-VK4.ru).mp3" type="audio/mpeg">
  
 </audio>
-
+-->
 <body id="body" class="body">
   
   <header>
@@ -281,29 +281,31 @@
       
        <div class="form-block">
         
-       <form class="form-item">
+       <form action="sendmail.php" method="POST" id="form" class="form__item">
        <p class="form-text"> Оставьте заявку <br>и мы обязательно <br>договоримся</p>      
-       <input class="form-input" type="text" placeholder="Имя">
-       <input class="form-input" type="text" placeholder="телефон">
-       <input class="form-input" type="text" placeholder="eMail">
+       <input id="formName" name="name" class="form__input _req" type="text" placeholder="Имя">
+       <input id="formPhone" class="form__input _req" name="phone" type="text" placeholder="телефон">
+       <input id="formEmail" name="email" class="form__input _req _email" type="text" placeholder="email">
+       <textarea id="formMessage" type="text" class="form__input" placeholder="Ваши пожелания"></textarea>
        
-       </div>
-       
-             <!-- флаг для формы -->
-       <ul class="flag-list">
-       <li class="flag">Я согласен на обработку персональных данных</li>
-       </ul>
+       <input accept=".jpg .png .psd .gif" type="file" name="image" id="formImage" class="form__file">
+       <div class="file__button">Выбрать</div>
+       <div id="formPreview" class="file__preview"></div>
+      
+      
+       <div class="checkbox">
+       <input id="formAgreement" class="checkbox__input _req"
+        checked type="checkbox" name="formAgreement"> 
+       <label for="formAgreement" class="form__label"> Я согласен на обработку персональных данных</label>
+        </div>
                <!-- кнопка Узнать цену-->
                
        <div class="btn-sells">
-       <form action="Portfolio.html">
-       <a href="#" class="btn-sell">Узнать стоимость</a>
+       <button type="submit" class="form__button">Узнать стоимость</button>
+       </div>
+       </div>
        </form>
        </div>
-         
-    
-       </div>
-       
        </section>
        
            <!-- new modal-s window bay -->
@@ -333,8 +335,8 @@
        </ul>
        <div class="btn-sells">
        
-       <form action="Portfolio.html">
-       <button type="submit" class="btn-sell">Узнать стоимость</button>
+       <form action="#">
+       <button type="#" class="form__button">Узнать стоимость</button>
        </form>
           
        </div>
@@ -372,7 +374,7 @@
        </footer>
 
        <script src="Newland.js"></script>
-
+       <script src="newscript.js"></script>
 
 </body>
 
